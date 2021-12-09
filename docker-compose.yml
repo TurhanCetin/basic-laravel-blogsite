@@ -61,33 +61,6 @@ services:
     networks:
       - app-network
 
-  #RabbitMq Service
-  rabbitmq:
-    image: rabbitmq:3.8-management
-    container_name: rabbitmq
-    restart: unless-stopped
-    tty: true
-    ports:
-      # The standard AMQP protocol port
-      - "5672:5672"
-      # HTTP management UI
-      - "15672:15672"
-    environment:
-      RABBITMQ_DEFAULT_USER: ${RABBITMQ_USER}
-      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASS}
-    networks:
-      - app-network
-
-  #Mailhog Service
-  # mailhog:
-  #   image: mailhog/mailhog:latest
-  #   container_name: mailhog
-  #   restart: always
-  #   ports:
-  #     - 1025:1025
-  #     - 8025:8025
-  #   networks:
-  #     - app-network
 
 #docker Networks
 networks:
