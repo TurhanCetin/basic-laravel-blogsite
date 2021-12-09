@@ -18,7 +18,7 @@ class BlogSeeder extends Seeder
         $faker=\Faker\Factory::create();
         DB::table('blogs')->insert([
             'categoryid'=>rand(1,4),
-            'image'=>$faker->imageUrl(420,340,'cats',true,'Konu Resmi'),
+            'image'=>$faker->imageUrl(420,340,'technology',true),
             'title'=>$faker->sentence(6),
             'subtitle'=>$faker->sentence(10),
             'description'=>$faker->paragraph,

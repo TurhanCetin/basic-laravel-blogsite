@@ -5,7 +5,7 @@
             @foreach($blogs as $blog)
             <div  class="post-preview">
                <a href="{{route('frontdetailpage',[$blog->getCatName->slug,$blog->slug])}}">
-                    <img src="{{$blog->image}}">
+                    <img style="max-width: 640px; max-height: 480px" src="{{$blog->image}}">
                     <h2 class="post-title">{{$blog->title}}</h2>
                     <h5 class="post-subtitle">{{$blog->subtitle}}</h5>
                 </a>

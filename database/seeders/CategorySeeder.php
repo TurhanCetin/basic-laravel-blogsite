@@ -14,7 +14,7 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-        $categories = ['Bilgisayar', 'Yazılım', 'Giyim', 'Eğlence','Teknoloji','AR-GE','Günlük Hayat','Magazin'];
+        $categories = ['Genel','Bilgisayar', 'Yazılım', 'Giyim', 'Eğlence','Teknoloji','AR-GE','Günlük Hayat','Magazin'];
 
         $faker=\Faker\Factory::create();
         foreach ($categories as $cat) {

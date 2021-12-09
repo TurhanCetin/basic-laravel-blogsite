@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 class CategoryController extends Controller
 {
     public function index(){
-        $data['allCategories']=Category::paginate(4);
+        $data['allCategories']=Category::where('status',1)->paginate(4);
         $data['blogs']=Blog::orderby('created_at','DESC')->get();
         return view('front.categorypage',$data);
 
