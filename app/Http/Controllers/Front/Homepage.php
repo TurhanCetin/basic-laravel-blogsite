@@ -5,8 +5,6 @@ namespace App\Http\Controllers\Front;
 use App\Http\Controllers\Controller;
 use App\Models\Blog;
 use App\Models\Category;
-use App\Models\Blogs;
-use Illuminate\Support\Facedes\DB;
 
 class Homepage extends Controller
 {
