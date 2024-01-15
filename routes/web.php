@@ -34,10 +34,6 @@ Route::prefix('admin')->name('admin.')->middleware('isLogin')->group(function ()
 
 Route::prefix('admin')->name('admin.')->middleware('isAdmin')->group(function () {
 
-    Route::get('panel',[Dashboard::class,'getPanel'])->name('dashboard'); // Bunu yukarıya aldık çünkü aşşapğıda olduğu zaman diğer
-    // routerların parametre beklemesinden dolayı bunun url adresindekileride
-    // parametre olarak alıp kategori tablosunda arıyor bulamadığı içinde 403 dönüyor.
-
     /*-------Blog Routes-------*/
 
     Route::get('blogs/wasDeleted/',[AdminBlogController::class, 'trashed'])->name('deleted.blog');
